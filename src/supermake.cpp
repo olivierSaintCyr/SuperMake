@@ -11,6 +11,8 @@ int main(int argc, char** argv)
 	{
 		string outfile = argv[i];
 		outfile.erase(outfile.end()-4, outfile.end());
+		outfile = outfile + ".out";
+
 		const string command = cc + " " + argv[i] + " -o " + outfile + " " + stdlib;
 		system(command.c_str());
 	}
